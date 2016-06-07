@@ -1,0 +1,34 @@
+﻿{
+    "main" : {
+        "title" : "ShuttleApp",
+		"start" : "Start",
+        "startP" : "Start wählen",
+		"target" : "Ziel",
+        "targetP" : "Ziel wählen",
+        "search" : "suchen",
+		"appUpdate" : {
+			"title" : "Update verfügbar!",
+			"text" : "Eine neue Version der Shuttleapp ist verfügbar. <br> Jetzt im Appstore laden!",
+			"btn" : "Ok"
+		},
+		"contentUpdate" : {
+			"loading" : "Neue Inhalte werden geladen..."
+		}
+    },
+    "stops" : {
+        "title" : {
+			"start" : "Start wählen",
+			"target" : "Ziel wählen"
+		}
+    },
+	"settings" : {
+		"title" : "Einstellungen"
+	},
+    "locationmodal" :{
+		"title" : "Standort wählen"
+    },
+	"languages" : {
+		"de" : "Deutsch",
+		"en" : "Englisch"
+	}
+}

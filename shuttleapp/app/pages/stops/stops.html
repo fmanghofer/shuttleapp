@@ -1,0 +1,19 @@
+<ion-navbar *navbar>
+  <ion-title>
+    {{headline}}
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="stops">
+  <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems($event)" audired></ion-searchbar>
+  <ion-list>
+
+  <ion-item *ngFor="#item of items" (click)="onClick(item)">
+  <ion-icon name="{{item.icon}}"  class="item_spacer" [ngClass]="{'iconitem_invisible':  item.selected == false, 'iconitem_visible': item.selected}" audired></ion-icon>
+  {{ item.name }}
+
+  <ion-icon name="checkmark-circle" [ngClass]="{'iconitem_invisible':  item.selected == false, 'iconitem_visible': item.selected}" item-right audired></ion-icon>
+
+  </ion-item>
+  </ion-list>
+</ion-content>

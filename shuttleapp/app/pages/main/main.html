@@ -1,0 +1,50 @@
+<ion-navbar *navbar>
+  <ion-title>
+   {{ texts.main.title }}
+  </ion-title>
+  <ion-buttons *ngIf="contentUpdate && dataService.online" end>
+    <button outline (click)="onUpdateContent()" audired>
+      <ion-icon name='refresh'></ion-icon>UPDATE
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content class="main">
+	<form [ngFormModel]="searchForm" (ngSubmit)="onSubmit(searchForm.value)">
+		<table>
+			<tr>
+				<td width="100%">
+					<ion-card>
+						<ion-item (click)="onChooseStart()">
+							<ion-label><button clear><ion-icon name="{{startIcon}}" audired></ion-icon></button></ion-label>
+							<ion-input type="text" value="" placeholder="{{ texts.main.startP }}" [ngFormControl]="start" [(ngModel)]="startVal.name" [disabled]="true"></ion-input>
+						</ion-item>
+						<div *ngIf="start.hasError('required') && start.touched" class="error-box"> Start error</div>
+					</ion-card>
+				</td>
+				<td padding-right>
+					<button audired>
+						<ion-icon name="map"></ion-icon>
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<ion-card>
+						<ion-item (click)="onChooseTarget()">
+							<ion-label><button clear><ion-icon name="{{targetIcon}}" audired></ion-icon></button></ion-label>
+							<ion-input type="text" value="" placeholder="{{ texts.main.targetP }}" [ngFormControl]="target" [(ngModel)]="targetVal.name" [disabled]="true"></ion-input>
+						</ion-item>
+						<div *ngIf="target.hasError('required') && target.touched" class="error-box"> Target error</div>
+					</ion-card>
+				</td>
+				<td>
+					<button audired>
+						<ion-icon name="map"></ion-icon>
+					</button>
+				</td>
+			</tr>
+		</table>
+		<button type="submit" [disabled]="!searchForm.valid" block>{{ texts.main.search }}</button>
+	</form>
+</ion-content>

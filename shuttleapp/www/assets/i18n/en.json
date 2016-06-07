@@ -1,0 +1,11 @@
+{
+    "main" : {
+        "title" : "ShuttleApp",
+        "start" : "Choose Start",
+        "target" : "Choose Target",
+        "search" : "search"
+    },
+    "stops" : {
+        
+    }
+}

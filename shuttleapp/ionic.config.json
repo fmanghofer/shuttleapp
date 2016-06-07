@@ -1,0 +1,12 @@
+{
+  "name": "shuttleapp",
+  "app_id": "",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/backend",
+      "proxyUrl": "http://florian-manghofer.de/shuttleapp/backend.php"
+    }  
+  ]
+}
